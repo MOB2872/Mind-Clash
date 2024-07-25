@@ -14,6 +14,16 @@
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 20px;
+    animation: glowText 2s linear infinite alternate;
+}
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+    }
+    to {
+        text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 30px #ff00de;
+    }
 }
 
 .button-container a {
@@ -61,8 +71,8 @@
 }
 
 .container img {
-    max-width: 80%; /* Reduzindo o tamanho das imagens */
-    max-height: 300px; /* Limitando a altura máxima das imagens */
+    max-width: 100%; /* Reduzindo o tamanho das imagens */
+    max-height: 200px; /* Limitando a altura máxima das imagens */
     margin: 20px 0; /* Adicionando margem para espaçamento */
     border-radius: 10px; /* Adicionando borda arredondada */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adicionando sombra */
@@ -204,3 +214,4 @@ body, html {
     background-color: #c00000;
     color: #fff;
 }
+
