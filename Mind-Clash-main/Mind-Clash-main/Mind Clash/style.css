@@ -1,0 +1,206 @@
+/* Estilo para a página inicial (home) */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #ffffff);
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button-container a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-container a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Estilo para a tela de instruções */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #ffffff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.container h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.container p {
+    margin-bottom: 10px;
+}
+
+.container img {
+    max-width: 80%; /* Reduzindo o tamanho das imagens */
+    max-height: 300px; /* Limitando a altura máxima das imagens */
+    margin: 20px 0; /* Adicionando margem para espaçamento */
+    border-radius: 10px; /* Adicionando borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adicionando sombra */
+    transition: transform 0.3s ease-out; /* Animação de transição */
+}
+
+.container img.animate-slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+.creator-img {
+    width: 100px; /* Ajustando o tamanho da imagem dos criadores */
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 10px 0;
+    transition: transform 0.3s; /* Adicionando transição ao hover */
+}
+
+.creator-img.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e70000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #c00000;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo  para imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para a tela de jogo */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #303030, #000000);
+    color: white;
+    text-align: center;
+}
+
+.score-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.score-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.score-item {
+    background-color: rgba(202, 24, 24, 0.1);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 100%; 
+    text-align: center;
+    font-size: 20px;
+}
+
+.score-item:nth-child(1) {
+    width: 100%;
+}
+
+.score-item:nth-child(2) {
+    width: 90%;
+}
+
+.score-item:nth-child(3) {
+    width: 80%;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e70000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #c00000;
+    color: #fff;
+}
