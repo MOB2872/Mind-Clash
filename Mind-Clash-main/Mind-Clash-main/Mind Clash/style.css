@@ -1,4 +1,4 @@
-/* Estilo para a página inicial (home) */
+* Estilo para a página inicial (home) */
 .home-container {
     display: flex;
     flex-direction: column;
@@ -45,21 +45,7 @@
     transform: scale(1.1);
 }
 
-/* Estilo para o efeito de neve */
-.snow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Garante que a neve não interfira com os cliques */
-    overflow: hidden;
-    z-index: 10; /* Coloca a neve atrás do conteúdo */
-    background: radial-gradient(circle, rgba(245, 243, 243, 0.8) 10%, transparent 10%) 0 0,
-                radial-gradient(circle, rgba(0, 0, 0, 0.8) 10%, transparent 10%) 50px 50px;
-    background-size: 10px 10px;
-    animation: fall linear infinite;
-}
+
 
 @keyframes fall {
     from {
@@ -261,6 +247,15 @@ body, html {
 .score-title {
     font-size: 2em;
     margin-bottom: 20px;
+    animation: colorChange 2s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #e70000; transform: scale(1); }
+    25% { color: #00e7e7; transform: scale(1.1); }
+    50% { color: #e7e700; transform: scale(1.2); }
+    75% { color: #00e700; transform: scale(1.1); }
+    100% { color: #e70000; transform: scale(1); }
 }
 
 .score-board {
@@ -310,3 +305,98 @@ body, html {
     background-color: #c00000;
     color: #fff;
 }
+
+player-names {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.player-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-name label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.player-name input {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #222;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+.player-names {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.player-name {
+    margin: 0 10px;
+}
+
+.player-name input {
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+
+.score-board {
+    margin: 20px 0;
+}
+
+.score-item {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgb(146, 146, 146);
+    border-radius: 5px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c00;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #a00;
+}
+
