@@ -8,13 +8,54 @@
 </head>
 <body>
     <div class="container">
-         <h2 class="score-title"> Score </h2>
-        <div class="score-board">
-            <div class="score-item">1º: <span id="first-score">0</span></div>
-            <div class="score-item">2º: <span id="second-score">0</span></div>
-            <div class="score-item">3º: <span id="third-score">0</span></div>
+        <h2>Placar</h2>
+        <div class="player-names">
+            <div class="player-name">
+                <label for="player1-name">Player 1:</label>
+                <input type="text" id="player1-name" placeholder="Nome do Jogador 1">
+            </div>
+            <div class="player-name">
+                <label for="player2-name">Player 2:</label>
+                <input type="text" id="player2-name" placeholder="Nome do Jogador 2">
+            </div>
         </div>
+
+        <h2 class="score-title">Score</h2>
+        <div class="score-board">
+            <div class="score-item">1º: <span id="first-score">0</span> - <span id="first-player"></span></div>
+            <div class="score-item">2º: <span id="second-score">0</span> - <span id="second-player"></span></div>
+            <div class="score-item">3º: <span id="third-score">0</span> - <span id="third-player"></span></div>
+        </div>
+        
+        <button class="button" onclick="iniciarJogo()">INICIAR</button>
         <a href="index.html" class="button">Voltar</a>
     </div>
+
+    <script>
+        function updateScores(player1Score, player2Score) {
+            let player1Name = document.getElementById("player1-name").value || "Player 1";
+            let player2Name = document.getElementById("player2-name").value || "Player 2";
+
+            let scores = [
+                { name: player1Name, score: player1Score },
+                { name: player2Name, score: player2Score }
+            ];
+
+            scores.sort((a, b) => b.score - a.score);
+
+            document.getElementById("first-score").textContent = scores[0].score;
+            document.getElementById("first-player").textContent = scores[0].name;
+            document.getElementById("second-score").textContent = scores[1].score;
+            document.getElementById("second-player").textContent = scores[1].name;
+        }
+
+        function iniciarJogo() {
+            // Função para iniciar o jogo
+        }
+
+        setTimeout(() => {
+            updateScores(150, 120); // Exemplo de pontuações para teste
+        }, 3000); // Atualiza após 3 segundos
+    </script>
 </body>
 </html>
